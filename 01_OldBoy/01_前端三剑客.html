@@ -1,0 +1,54 @@
+html 
+1.为标记语言,是非编程语言
+2.自身不具备逻辑,遇到负责重复操作只能全部手写(Ctrl+C > V)
+3.组成:标签, 指令, 实体
+标签:由<>包裹,以字母开头可以结合合法字符可以被浏览器解析的标记(纯字母或字母与数字组合)
+<zero>小VV</zero>
+探讨
+<a_1>abc</a_1>
+<a$1>def</a$1>
+<1a>xyz</1a>
+指令:被<>包裹,以!开头的可以被浏览器解析的标记
+eg: <!dcotype> <!-- html的注释 -->
+<!我也是注释>
+实体:被&;包裹的#开头的十进制数或特殊字母组合
+&#60;zero&gt;
+文档类型:规定该页面的标签遵循的html语法(h5)
+<!doctype html>
+
+css
+选择器:由标签/类/id单独或组合出现
+作用域:{}内部区域
+样式块:满足css链接语法的各种样式
+
+<style>
+	/*选择器zero 作用域{} 样式块color: red;*/
+	zero {
+		color: red
+		/*css语法必须书写;最后一条样式可以省略*/
+		background-color: cyan;
+		font-size: 100px
+	}
+	a_1 {
+		color: blue;
+	}
+	/*css注释:不支持*/
+	a$1 {
+		color: green;
+	}
+	1a {
+		color: pink;
+	}
+</style>
+
+js
+BOM:js操作浏览器
+DOM:js操作页面文档
+ES:js语法(ECAMScript)
+
+LiveScript -> JavaScript
+
+<script type="text/javascript">
+	// js注释: 可以省略;(不建议)
+	alert("你丫真帅");
+</script>
