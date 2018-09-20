@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HGQ_day02</title>
+	<style type="text/css">
+		body {
+			filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+			-moz-background-size:100% 100%;  
+    		background-size:100% 100%;  
+			background-attachment: fixed;
+			background-image: url(bj.jpg);
+		}
+		h1 {
+			text-align: center;
+			color:#fff;
+		}
+		.class_01 {
+			margin: auto;
+			width: 70%;
+			height: 5000px;
+			border: 3px solid #fff;
+		}
+		h2,h3 {
+			color: #fff;
+		}
+		p {
+			text-align: left;
+			text-indent: 2em;
+			color:#fff;
+		}
+		.div {
+			width: 60%;
+			word-break: break-all;
+		}
+		pre {
+			font-size: 20px;
+			text-align: left;
+			color:#fff;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>前端第二天</h1>
+	<div class="class_01">
+		<h2>一、css三种引入方式</h2>
+			<p>行间式、内联式、外联式</p>
+
+		<br>
+
+		<h2>二、长度及颜色单位</h2>
+			<h3>1、长度单位</h3>
+				<P>px：像素（pixel），屏幕上显示的最小单位，用于网页设计，直观方便</P>
+				<p>mm：毫米</p>
+				<p>cm：厘米</p>
+				<p>in：英寸</p>
+				<p>pt：点（point），一个标准的长度单位，1pt = 1/72 in，用于印刷业，非常简单易用</p>
+				<p>em：相当于长度，通常 1em = 16px ，应用于流式布局</p>
+
+			<h3>2、颜色单位</h3>
+				<p>rgb()：三个值可为 [0-255] 数值或百分比， 以 '英文逗号' 隔开（r:Red g:Green b:Blue）</p>
+				<p>rgba()：前三个值可为像素或是百分比，最后一个为[0, 1]数值，以 '英文逗号' 隔开（r:Red g:Green b:Blue a:Alpha）</p>
+				<p>hsl()：第一个值为[0,360]数值，后二个值可为百分比， 以 '英文逗号' 隔开（h:Hue s:Saturation l:Lightness）</p>
+				<p>hsla()：第一个值为[0,360]数值，中间二个值可为百分比，最后一个为[0, 1]数值， 以 '英文逗号' 隔开 <br>（h:Hue s:Saturation l:Lightness a:Alp
+				ha）</p>
+				<p>#AABBCC：六个十六进制位，每两位一整体，分别代表Red、Green、Blue，可以简写 #abc</p>	
+			
+			<h3>3、字体样式</h3>
+				<div class="div">
+					<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;字体样式&lt;/title&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		span {
+		/*大小*/
+		font-size: 30mm;
+		/*字重: bold normal lighter 100~900*/
+		font-weight: 900;
+		/*行高: 行高设置大于等于字体大小,字体在行高中垂直居中显示*/
+		line-height: 50mm;
+		/*样式: 一般不关心*/
+		font-style: normal;
+		/*字族:可以自定义字族*/
+		/*当Segoe UI Emoji不存在,或不起作用,再选取 微软雅黑 */
+		/*备用字族*/
+		font-family: &quot;Segoe UI Emoji&quot;, &quot;微软雅黑&quot;;
+
+		/*css语法: 空格隔开为多个值赋值, ,隔开为一个值多值赋值*/
+		font: lighter 50mm/80mm &quot;Segoe UI Emoji&quot;, &quot;微软雅黑&quot;;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;span&gt;123abc呵呵&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre>
+				</div>
+	
+
+			<h3>4、文本样式</h3>
+			<div class="div">
+				<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;文本样式&lt;/title&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		h1 {
+			text-align: center;
+		}
+		span {
+		/*颜色*/
+		color: red;
+		/*水平居中方式:left center right*/
+		text-align: center;
+		/*字划线: underline line-through overline none*/
+		text-decoration: line-through;
+		/*字间距*/
+		letter-spacing: 3px;
+		/*词间距*/
+		word-spacing: 10px;
+		}
+		div {
+		width:300px;
+		/*显示方式*/
+		display: inline-block;
+		}
+		/*对齐方式*/
+		div {
+		font-size: 12px;
+		/*垂直排列方式: top baseline bottom*/
+		vertical-align: baseline;
+		/*缩进(一个em相当于一个中文汉字的大小)*/
+		text-indent: 2em;
+		}
+		/*遇到连体的英文,html将其解析成一个单词(整体)*/
+		.div {
+		/*按标签的设定宽度强行换行,可以在单词(整体)内部换行*/
+		word-break: break-all;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;标题&lt;/h1&gt;
+	&lt;span&gt;123 abc 呵呵&lt;/span&gt;
+	&lt;div&gt;嘻嘻 哼哼 呵呵 哈哈&lt;/div&gt;
+	&lt;div&gt;red yellow green big small red yellow green big small&lt;/div&gt;
+
+	&lt;div class=&quot;div&quot;&gt;jljskladjfasdlfjklsaj&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;					
+				</pre>
+			</div>
+			<h3>5、背景样式</h3>
+			<pre>
+	- background-color：颜色
+	- background-image：图片
+	- background-repeat：重复
+	- background-position：定位
+			</pre>
+	</div>
+
+</body>
+</html>
